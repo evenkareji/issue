@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>srcの表示をいじる</p>
+    <img src="https://picsum.photos/200/300?image=0" id="photo_slide" />
+
+    <script>
+      let imageCount = 0
+      const img = document.getElementById('photo_slide')
+      let src = 'https://picsum.photos/200/300?image='
+
+      console.log(src)
+      img.addEventListener('click', () => {
+        ++imageCount
+        photo_slide.setAttribute('src', src + imageCount)
+      })
+    </script>
+  </body>
+</html>
