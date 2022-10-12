@@ -11,14 +11,16 @@
     <img src="https://picsum.photos/200/300?image=0" id="photo_slide" />
 
     <script>
-      let imageCount = 0
+      let countImage = 1
       const img = document.getElementById('photo_slide')
-      let src = 'https://picsum.photos/200/300?image='
+      let src = photo_slide.getAttribute('src')
 
-      console.log(src)
       img.addEventListener('click', () => {
-        ++imageCount
-        photo_slide.setAttribute('src', src + imageCount)
+        ++countImage
+        photo_slide.setAttribute(
+          'src',
+          `https://picsum.photos/200/300?image=${countImage}`,
+        )
       })
     </script>
   </body>
